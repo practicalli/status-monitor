@@ -1,7 +1,12 @@
 (ns practicalli.status-monitor-service
   (:gen-class)
-  (:require [compojure.core :refer [defroutes GET]]
-            [org.httpkit.server :as app-server]))
+  (:require
+   [org.httpkit.server       :as    app-server]
+   [compojure.core           :refer [defroutes GET]]
+   [compojure.route          :refer [not-found]]
+   [ring.handler.dump        :refer [handle-dump]]
+   [ring.util.response       :refer [response]]
+   [practicalli.helpers-http :refer [http-status-code]]))
 
 
 ;; Application routing
@@ -9,6 +14,8 @@
 
 (defroutes status-monitor
   (GET "/" [] {:status 200 :body "Status Monitor Dashboard"}))
+  (GET "/request-dump" [] handle-dump)
+  )
 
 
 ;; System
