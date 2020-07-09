@@ -9,11 +9,19 @@
    [practicalli.helpers-http :refer [http-status-code]]))
 
 
+
+;; Request handlers
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn dashboard
+  [request]
+  {:status (:OK http-status-code) :body "Status Monitor Dashboard" :headers {}})
+
 ;; Application routing
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defroutes status-monitor
-  (GET "/" [] {:status 200 :body "Status Monitor Dashboard"}))
+  (GET "/" [] dashboard)
   (GET "/request-dump" [] handle-dump)
   )
 
