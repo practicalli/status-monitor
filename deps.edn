@@ -11,7 +11,11 @@
   }
 
  :aliases
- {:test
+ {
+  :dev
+  {:extra-deps {ring/ring-mock {:mvn/version "0.4.0"}}}
+
+  :test
   {:extra-paths ["test"]
    :extra-deps  {org.clojure/test.check {:mvn/version "1.0.0"}}}
 
