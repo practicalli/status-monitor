@@ -44,11 +44,11 @@
 (defn -main
   "Start the application server and run the application"
   [& {:keys [port]
-      :or   {port 8888}}]
+      :or   {port "8888"}}]
   (println "INFO: Starting server on port: " port)
 
   (reset! app-server-instance
-          (app-server/run-server #'status-monitor {:port port})))
+          (app-server/run-server #'status-monitor {:port (Integer/parseInt port)})))
 
 
 (defn restart-app-server
