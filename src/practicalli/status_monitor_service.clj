@@ -85,6 +85,7 @@
     (reset! app-server-instance
             (app-server/run-server #'status-monitor {:port port})))
 
-
+  ;; original Procfile
+  ;; web: java -cp status-monitor-service.jar clojure.main -m practicalli.status-monitor-service $PORT
 
   )
