@@ -64,12 +64,27 @@
 (comment
 
   ;; start application
-  (-main :port 8000)
+  ;; (-main :port 8000)
+  (-main 8080)
 
   ;; stop application
   (stop-app-server)
 
   ;; restart application
   (restart-app-server)
+
+
+  ;; Optional port setting approach
+
+  (defn -main
+    "Start the application server and run the application"
+    [& {:keys [port]
+        :or   {port 8888}}]
+    (println "INFO: Starting server on port: " port)
+
+    (reset! app-server-instance
+            (app-server/run-server #'status-monitor {:port port})))
+
+
 
   )
