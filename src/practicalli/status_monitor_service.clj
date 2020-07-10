@@ -15,7 +15,9 @@
 
 (defn dashboard
   [request]
-  {:status (:OK http-status-code) :body "Status Monitor Dashboard" :headers {}})
+  (response "Status Monitor Dashboard"))
+
+
 
 ;; Application routing
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
