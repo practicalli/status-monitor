@@ -65,7 +65,7 @@
 (comment
 
   ;; start application
-  (-main)
+  (-main :port 8000)
 
   ;; stop application
   (stop-app-server)
