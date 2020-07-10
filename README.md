@@ -30,8 +30,10 @@ Open the `src/practicalli/status-monitor-service.clj` file in a Clojure aware ed
 
 Run all the project tests using Cognitect Labs test runner, which is included in the project `deps.edn` file.
 
+`:dev` adds the ring-mock library for generating request data.  `:test` adds the `test/` directory to the class path to include the unit test code.
+
 ```shell
-clojure -A:test:runner
+clojure -A:dev:test:runner
 ```
 
 Cognitect Labs, eftest and kaocha test runners are available in the [practicalli/clojure-deps-edn](https://github.com/practicalli/clojure-deps-edn) repository
