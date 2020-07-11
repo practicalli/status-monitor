@@ -15,7 +15,7 @@
 
 (defn dashboard
   [request]
-  (response "Status Monitor Dashboard"))
+  (response "Status Monitor Dashboard via CircleCI and Heroku"))
 
 
 
@@ -66,8 +66,10 @@
 (comment
 
   ;; start application
+  ;; Evaluate the buffer or require the namespace
+  ;; Then call the -main function with a port number
   ;; (-main :port 8000)
-  (-main 8080)
+  (-main "8080")
 
   ;; stop application
   (stop-app-server)
