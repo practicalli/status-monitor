@@ -7,5 +7,5 @@
   (testing "Testing elements on the dashboard"
     (is (= (SUT/dashboard (mock/request :get "/"))
            {:status  200
-            :body    "Status Monitor Dashboard"
+            :body    "Status Monitor Dashboard via CircleCI and Heroku"
             :headers {}}))))
