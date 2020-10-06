@@ -22,7 +22,7 @@ Code from this project is shared via the repository: https://github.com/practica
 The project was created with [Leiningen](https://github.com/technomancy/leiningen) 2.8.1, using the compojure template.
 
 ```shell
-clojure -A:new app practicalli/status-monitor-service
+clojure -A:project/new app practicalli/status-monitor-service
 ```
 
 ## Development
