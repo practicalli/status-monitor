@@ -21,9 +21,10 @@ Code from this project is shared via the repository: https://github.com/practica
 
 The project was created with [Leiningen](https://github.com/technomancy/leiningen) 2.8.1, using the compojure template.
 
-```shell
-clojure -A:new app practicalli/status-monitor-service
-```
+<!-- ```shell -->
+<!-- TODO: update to Clojure CLI tools -->
+<!-- clojure -M:project/new app practicalli/status-monitor-service -->
+<!-- ``` -->
 
 ## Development
 Open the `src/practicalli/status-monitor-service.clj` file in a Clojure aware editor and start a REPL
