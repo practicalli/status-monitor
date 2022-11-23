@@ -1,35 +1,31 @@
 (ns practicalli.status-monitor-service
   (:gen-class)
   (:require
-   [org.httpkit.server       :as    app-server]
-   [compojure.core           :refer [defroutes GET]]
-   [compojure.route          :refer [not-found]]
-   [ring.handler.dump        :refer [handle-dump]]
-   [ring.util.response       :refer [response]]
-   [practicalli.helpers-http :refer [http-status-code]]))
+   [org.httpkit.server :as    app-server]
+   [compojure.core     :refer [defroutes GET]]
+   [compojure.route    :refer [not-found]]
+   [ring.handler.dump  :refer [handle-dump]]
+   [ring.util.response :refer [response]]))
 
-
-
-;; Request handlers
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ---------------------------------------------------------
+;; Request Handlers
 
 (defn dashboard
-  [request]
+  [_]
   (response "Status Monitor Dashboard via CircleCI and Heroku"))
 
 
-
+;; ---------------------------------------------------------
 ;; Application routing
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defroutes status-monitor
   (GET "/" [] dashboard)
   (GET "/request-dump" [] handle-dump)
+  (not-found)
   )
 
-
+;; ---------------------------------------------------------
 ;; System
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Running state of the application server
 (defonce app-server-instance (atom nil))
@@ -60,8 +56,8 @@
 
 
 
+;; ---------------------------------------------------------
 ;; REPL Driven Development - useful function calls
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (comment
 
