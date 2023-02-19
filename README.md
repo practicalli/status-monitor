@@ -10,9 +10,9 @@
 
 The status-monitor-service provides a server-side web dashboard for visualizing the operational status of various services.
 
-Code from this project is shared via the repository: https://github.com/practicalli/status-monitor-service.
+Code from this project is shared via the repository: https://github.com/practicalli/status-monitor.
 
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/practicalli/status-monitor-service)
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/practicalli/status-monitor)
 
 - [ascii banner generation](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=status%20monitor)
 
