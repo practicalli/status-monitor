@@ -1,9 +1,9 @@
-(ns practicalli.helpers-http)
+(ns practicalli.http-code)
 
 ;; Http related helper functions and data
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(def http-status-code
+(def status
   "Convenience names for http status codes
   https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"
 
